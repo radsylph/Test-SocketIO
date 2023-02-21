@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pop-up {
+  padding: 32px 64px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  opacity: 0%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%);
+}
+
+.pop-up.show {
+  opacity: 100%;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}

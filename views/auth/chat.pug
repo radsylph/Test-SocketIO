@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Chat | #{pagina} 
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="/css/tailwind.css")
+            
+    body(class ="m-0 pb-12")
+        div#backdrop(class = "pointer-events-none fixed inset-0 bg-black opacity-0")
+        div#modal(class = "pop-up")
+            h1 A user has been connected
+        ul#message(class = "m-0 p-0 list-none [&>*]:px-1")
+        form#form(class ="flex bottom-0 left-0 right-0 fixed back p-1.5 bg-slate-500")
+            input#user(class="border-double border-4 border-sky-500 rounded-lg mx-2 placeholder:text-slate-500   placeholder:text-center" , type="text" , placeholder ="write your user name")
+            input#input(class = " w-full focus:border-4 focus:border-solid   focus:bg-slate-700 rounded-lg tracking-normal" , type="text", name="mensaje", placeholder="Escribe tu mensaje")
+            input(class = "border border-black rounded mx-1.5 bg-slate-400 p-2 cursor-pointer hover:text-white active:shadow-lg active:shadow-black-500" , type="submit", value="Enviar")
+        script(src="/socket.io/socket.io.js")
+        script(src="/js/script.js") 
+
+    
+    
+            
+    
